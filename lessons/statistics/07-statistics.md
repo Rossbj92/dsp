@@ -86,14 +86,32 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+
+What we want is P(identical twin | twin brother) - i.e., the probability that Elvis was an identical twin given that he had a twin brother. Using Bayes theorem, we get:
+    
+    P(identical twin | twin brother) = (P(twin brother | identical twin) * P(identical twin)) / P(twin brother)
+
+
+We're given P(identical twin) = 1/300
+
+Given an identical twin, there's also a 1/2 chance that it's a boy or a girl (i.e., boy-boy, girl-girl) since identical boy-girl/girl-boy options are not part of this set. Thus, P(twin brother | identical twin) = 1/2
+
+Currently, we'll have:
+
+    P(identical twin | twin brother) = 1/2 * 1/300 / P(twin brother)    
+    
+There's two different ways that twin brothers can happen: identical twin brothers or fraternal twin brothers. We found the identical twin brother probability already (1/2 * 1/300). We're given P(fraternal twin) = 1/125,  but it won't be 1/2 * 1/300 because there's now 4 possibilites for fraternal twins: boy-boy, girl-girl, boy-girl, girl-boy. This leaves us with 1/4 * 1/300. 
+
+Putting it all together, we get:
+
+    P(identical twin | twin brother) = (1/2 * 1/300) / (1/2 * 1/300 + 1/4 * 1/125) = 5/11
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+They compare in that they both attempt to draw inferences from data. That is, every dataset that we have and wish to analyze could be approached with either Bayesian or frequentist methods. Those methods, and their philosophies, are where the two begin to differ.
 
 ---
 
